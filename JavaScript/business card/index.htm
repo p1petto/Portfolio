@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="constructor">
+                <form name="form" class="form">
+                   <div class="form__field">
+                        <label class="form__label">Наименование организации</label>
+                        <input type="text" name="institution">
+                
+                        <label class="form__name">ФИО</label>
+                        <input type="text" name="fullName">
+                        <div class="settings">
+                            <div class="radio-list size-name">
+                                <div class="form-radio">
+                                    <input type="radio" name="fullNameRadio" value="24px" id="radio-1">
+                                    <label for="radio-1">24px</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input type="radio" name="fullNameRadio" value="26px" id="radio-2" checked>
+                                    <label for="radio-2">26px</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input type="radio" name="fullNameRadio" value="28px" id="radio-3">
+                                    <label for="radio-3">28px</label>
+                                </div>
+                            </div>
+        
+                            <div class="radio-list align-name">
+                                <div class="form-radio">
+                                    <input type="radio" name="fullNameAlign" value="left" id="radio-4">
+                                    <label for="radio-4">L</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input type="radio" name="fullNameAlign" value="center" id="radio-5" checked>
+                                    <label for="radio-5">C</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input type="radio" name="fullNameAlign" value="right" id="radio-6">
+                                    <label for="radio-6">R</label>
+                                </div>
+                            </div>
+    
+                            <div class="radio-list  color">
+                                <input type="radio" name="nameColor" class="custom-radio black"     value="black"       id="radio-7" checked>
+                                <input type="radio" name="nameColor" class="custom-radio black3"    value="#333333"     id="radio-8" >
+                                <input type="radio" name="nameColor" class="custom-radio black4d"   value="#4d4d4d"     id="radio-9">
+                                <input type="radio" name="nameColor" class="custom-radio black6"    value="#666666"     id="radio-10">
+                                <input type="radio" name="nameColor" class="custom-radio grey"      value="#808080"     id="radio-11">
+                                <input type="radio" name="nameColor" class="custom-radio grey9"     value="#999999"     id="radio-12">
+                            </div>
+                        </div>
+    
+                        <label class="form__post">Должность</label>
+                        <input type="text" name="post">
+                        <div class="settings">
+                            <div class="radio-list  size-post">
+                                <div class="form-radio">
+                                    <input type="radio" name="postRadio" value="14px"  id="radio-13">
+                                    <label for="radio-13">14px</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input type="radio" name="postRadio" value="16px"  id="radio-14" checked>
+                                    <label for="radio-14">16px</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input type="radio" name="postRadio" value="18px"  id="radio-15">
+                                    <label for="radio-15">18px</label>
+                                </div>
+                            </div>
+                            
+                            <div class="radio-list align-post">
+                                <div class="form-radio">
+                                    <input type="radio" name="postAlign" value="left" id="radio-16">
+                                    <label for="radio-16">L</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input type="radio" name="postAlign" value="center" id="radio-17" checked>
+                                    <label for="radio-17">C</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input type="radio" name="postAlign" value="right" id="radio-18">
+                                    <label for="radio-18">R</label>
+                                </div>
+                            </div>
+    
+                            <div class="radio-list  color">
+                                <input type="radio" name="postColor" class="custom-radio black" value="black"    id="radio-19" checked>
+                                <input type="radio" name="postColor" class="custom-radio black3" value="#333333"  id="radio-20" >
+                                <input type="radio" name="postColor" class="custom-radio black4d" value="#4d4d4d"  id="radio-21">
+                                <input type="radio" name="postColor" class="custom-radio black6" value="#666666"  id="radio-22">
+                                <input type="radio" name="postColor" class="custom-radio grey" value="#808080"  id="radio-23">
+                                <input type="radio" name="postColor" class="custom-radio grey9" value="#999999"  id="radio-24">
+                            </div>
+                        </div>
+    
+                        <label class="form__phone">Телефон</label>
+                        <input type="text" name="phone">
+    
+                        <label class="form__mail">E-mail</label>
+                        <input type="text" name="mail">
+    
+                        <label class="form__address">Адрес</label>
+                        <input type="text" name="address">
+                   </div>
+                    <div class="form__button">
+                        <p><input type="button" value="Создать" class="button button--create" onclick="drawCard()"></p>
+                    </div>
+                </form>
+            </div>
+        
+            <div class="card-container">
+                <div id="card" class="card"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

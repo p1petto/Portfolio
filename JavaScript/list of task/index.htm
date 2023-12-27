@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main-area">
+            <div class="head">
+                <h1>Список задач</h1>
+                <button type="button" id="add" class="button blue">
+                    <i class="fa fa-plus-square"></i>
+                </button>
+            </div>
+    
+            <div class="list-of-task" id="list-of-task">
+            </div>
+        </div>
+
+        <div class="constuctor">
+            <div class="card" id="card">
+                <div class="title">Карточка задачи</div>
+                <form name="card" class="form">
+                    <div class="input-area">
+                        <label class="form__label">Задача</label>
+                        <input type="text" name="taskLabel">
+                    </div>
+    
+                    <div class="chbx-area">
+                    <input type="checkbox" name="priority" class="checkbox grey" id="chbx">
+                    Высокий приоритет
+                    </div>
+                    <div class="buttons">
+                        <button type="button" id="save" class="button blue" >
+                            <span>Сохранить</span>
+                        </button>
+                        <button type="button" id="cancel" class="button blue">
+                            <span>Отмена</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

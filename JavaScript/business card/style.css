@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    display: grid;
+    place-items: center;
+}
+.main-container{
+    width: 80%;
+    background-color: #666666;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    width: 80%;
+    place-items: center;
+}
+.constructor{
+    min-width: 30%;
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+.card-container{
+    width: 520px;
+    height: 295px;
+    display: grid;
+    place-items: center;
+    background-color:white;
+    border: 1px solid black;
+}
+.card{
+    width: 90%;
+    /* width: 85mm; */
+    height: 90%;
+    /* height: 54mm; */
+    font-family: sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    
+}
+
+.form__field{
+    display: flex;
+    flex-direction: column;
+}
+.form__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card__institution{
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    /* padding: 40px 0 0 0; */
+}
+
+.card__main{
+    width: 100%;
+}
+
+.card__name{
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    /* padding-bottom: 10px; */
+}
+.card__post{
+    font-size: 16px;
+    text-align: center;
+}
+
+.card__supportive{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+.card__cotact{
+    /* padding: 0 0 20px 0; */
+    font-size: 12px; 
+    width: 50%;
+}
+
+.card__cotact > *{
+    padding: 4px;
+}
+.settings{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+}
+.radio-list {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    place-items: center;
+    height: 20px;
+    width: 40%;
+    margin: 5px;
+}
+
+.radio-list input[type=radio] {
+	display: none;
+}
+
+.radio-list label {
+    display: inline-block;
+	cursor: pointer;
+	user-select: none;
+    font-size: 10px;
+    line-height: 20px;
+    width: 100%;
+}
+
+/* Checked */
+.radio-list input[type=radio]:checked + label{
+	font-weight: bold;
+    background-color: #d8d8d8;
+}
+/* Hover */
+.radio-list label:hover {
+	color: #666;
+}
+ 
+/* Disabled */
+.radio-list input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
+}
+    
+.color input[type=radio] {
+	display:block;
+}
+.color{
+    width: 100%;
+    border: none;
+    justify-content: space-around;
+}
+
+.color input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.color input[type='radio']:checked:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -5px;
+    left: -1px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.color .black:after {
+    background-color: #000000;
+}
+.color .black3:after {
+    background-color: #333333;
+}
+.color .black4d:after {
+    background-color: #4d4d4d;
+}
+.color .black6:after {
+    background-color: #666666;
+}
+.color .grey:after {
+    background-color: #808080;
+}
+.color .grey9:after {
+    background-color: #999999;
+}
+
+.form-radio{
+    border: 1px solid #999;
+    width: 100%;
+    text-align: center;
+}
+.form > *{
+    padding: 15px;
+}

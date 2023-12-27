@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+}
+body, html{
+    height: 100%;
+}
+body{
+    display: grid;
+    place-items: center;
+}
+.container{
+    display: grid;
+    grid-template-rows: auto auto;
+    place-items: center;
+    font-family: sans-serif;
+    margin-bottom: 100pt;
+}
+
+.field{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+.field__row{
+    display: flex;
+    flex-direction: row;
+}
+
+.field__block{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(244, 244, 244);
+    border: 1px solid white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    place-items: center;
+}
+
+.field__block:hover{
+    background-color: rgb(212, 212, 212);
+}
+.number-of-bombs{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    place-items: center;
+    font-size: 18pt;
+}
+
+.index-bombs{
+    position: relative;
+}
+
+.index-bombs::after{
+    content: '💣'; 
+    font-size: 26pt;
+    position: absolute;  
+    left: -85%;
+    top: 0%;
+     
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    min-width: 300px;
+}
+.opened{
+    background-color: rgb(226, 226, 226);
+}
+.selected{
+    background-color: rgb(212, 212, 212);
+}
+
+.marked::before{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    content: '🚩';
+    place-items: center;
+}
+
+.bomb::before{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    content: '💣';
+    place-items: center;
+}
+
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 20px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;  
+	border-radius: 4px;
+	height: 50px;
+	line-height: 32px;
+	font-size: 18pt;
+	font-weight: 500;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3775dd;
+	box-shadow: 0 2px #21487f;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+}
+.btn:hover {
+	background-color: #002fed;
+}
+.btn:active {
+	background-color: #2f599e !important;
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
