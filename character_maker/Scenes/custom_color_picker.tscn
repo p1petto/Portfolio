@@ -1,0 +1,116 @@
+[gd_scene load_steps=14 format=3 uid="uid://bfcphxa42tny2"]
+
+[ext_resource type="Texture2D" uid="uid://p6tehafnukq0" path="res://FemDownIdle.png" id="1_hus0x"]
+[ext_resource type="Shader" path="res://Shader/custom_color_picker.gdshader" id="1_mox7f"]
+[ext_resource type="Script" path="res://Scripts/AnimatedSprite2D.gd" id="3_5trcp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3wxpe"]
+shader = ExtResource("1_mox7f")
+shader_parameter/blue = 1.0
+shader_parameter/oldcolor1 = Color(0.780392, 0.780392, 0.780392, 1)
+shader_parameter/oldcolor2 = Color(0.192157, 0.192157, 0.192157, 1)
+shader_parameter/oldcolor3 = Color(0.396078, 0.396078, 0.396078, 1)
+shader_parameter/newcolor1 = Color(0.780392, 0.780392, 0.780392, 1)
+shader_parameter/newcolor2 = Color(0.192157, 0.192157, 0.192157, 1)
+shader_parameter/newcolor3 = Color(0.396078, 0.396078, 0.396078, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7akx1"]
+atlas = ExtResource("1_hus0x")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlk13"]
+atlas = ExtResource("1_hus0x")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kbfr"]
+atlas = ExtResource("1_hus0x")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2e5un"]
+atlas = ExtResource("1_hus0x")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6qsu"]
+atlas = ExtResource("1_hus0x")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5cmx"]
+atlas = ExtResource("1_hus0x")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2t7t"]
+atlas = ExtResource("1_hus0x")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip78f"]
+atlas = ExtResource("1_hus0x")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mniv8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7akx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlk13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kbfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2e5un")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6qsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5cmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2t7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip78f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CustomColorPicker" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+material = SubResource("ShaderMaterial_3wxpe")
+position = Vector2(786, 249)
+scale = Vector2(9, 9)
+sprite_frames = SubResource("SpriteFrames_mniv8")
+autoplay = "default"
+frame_progress = 0.0683871
+script = ExtResource("3_5trcp")
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+offset_left = 208.0
+offset_top = 215.0
+offset_right = 467.0
+offset_bottom = 267.0
+color = Color(0.780392, 0.780392, 0.780392, 1)
+
+[node name="ColorPickerButton2" type="ColorPickerButton" parent="."]
+offset_left = 208.0
+offset_top = 293.0
+offset_right = 467.0
+offset_bottom = 345.0
+color = Color(0.192157, 0.192157, 0.192157, 1)
+
+[node name="ColorPickerButton3" type="ColorPickerButton" parent="."]
+offset_left = 208.0
+offset_top = 374.0
+offset_right = 467.0
+offset_bottom = 426.0
+color = Color(0.396078, 0.396078, 0.396078, 1)
+
+[connection signal="color_changed" from="ColorPickerButton" to="AnimatedSprite2D" method="_on_color_picker_button_color_changed"]
+[connection signal="color_changed" from="ColorPickerButton2" to="AnimatedSprite2D" method="_on_color_picker_button_2_color_changed"]
+[connection signal="color_changed" from="ColorPickerButton3" to="AnimatedSprite2D" method="_on_color_picker_button_3_color_changed"]
