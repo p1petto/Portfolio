@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Line_Bar.qml</file>
+        <file>Bt.qml</file>
+        <file>Backspace.qml</file>
+        <file>Block.qml</file>
+    </qresource>
+</RCC>
